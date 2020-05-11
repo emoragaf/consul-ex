@@ -5,3 +5,5 @@ erl_crash.dump
 .DS_Store
 mix.lock
 /doc
+.elixir_ls
+.history
