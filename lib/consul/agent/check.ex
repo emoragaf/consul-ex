@@ -31,18 +31,18 @@ defmodule Consul.Agent.Check do
   @spec pass(binary, Keyword.t) :: Endpoint.response
   def pass(id, opts \\ []) do
     build_url([@agent, @check, @pass, id], opts)
-      |> req_put(%{})
+      |> req_put("")
   end
 
   @spec warn(binary, Keyword.t) :: Endpoint.response
   def warn(id, opts \\ []) do
     build_url([@agent, @check, @warn, id], opts)
-      |> req_put(%{})
+      |> req_put("")
   end
 
   @spec fail(binary, Keyword.t) :: Endpoint.response
   def fail(id, opts \\ []) do
     build_url([@agent, @check, @fail, id], opts)
-      |> req_put(%{})
+      |> req_put("")
   end
 end
